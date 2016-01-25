@@ -1,0 +1,18 @@
+{
+  "name": "kml_redux",
+  "version": "0.1.0",
+  "description": "Node version of the ruby app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/herkit/kml_redux"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/herkit/kml_redux/issues"
+  }
+}
