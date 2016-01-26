@@ -2,9 +2,8 @@
   "name": "kml_redux",
   "version": "0.1.0",
   "description": "Node version of the ruby app",
-  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -14,5 +13,12 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/herkit/kml_redux/issues"
+  },
+  "dependencies": {
+    "express": "~4.13.4",
+    "multer": "~1.1.0",
+    "express-ejs-layouts": "~2.0.0",
+    "ejs": "~2.4.1",
+    "node-uuid": "~1.4.7"
   }
 }

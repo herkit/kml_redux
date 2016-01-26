@@ -1,8 +1,0 @@
-<%= @filename %>
-<%= @type %>
-<div id="kml-data" data="<%= @tolerance %>"><!--<%= @filecontent %>--></div>
-<script>
-  $(document).ready(function() {
-    window.parent.KMLloaded($("#kml-data").attr("data"), $("#kml-data")[0].firstChild.nodeValue);
-  });
-</script>
