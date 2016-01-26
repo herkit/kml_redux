@@ -2,7 +2,7 @@
   var data = <%- data %>;
   $(document).ready(function() {
     $.get("/file/" + data.fileuid, function(file) {
-      window.parent.KMLloaded($("#kml-data").attr("data"), file);
+      window.parent.KMLloaded(data.tolerance, file);
     });
   });
 </script>

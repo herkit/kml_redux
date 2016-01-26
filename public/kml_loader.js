@@ -43,8 +43,8 @@ function reducePointsForCoordinate(coordinate) {
   var groups = allcoords.replace(/,\s*/g,',').split(/\s/);
   for (var i = 0, len = groups.length; i < len; ++i) {
     var coords = groups[i].split(',');
-    if (coords[0] && coords[1] && coords[2]) {
-      points.push(new DP.GeoPoint(coords[0],coords[1],coords[2]));
+    if (coords[0] && coords[1]) {
+      points.push(new DP.GeoPoint(coords[0],coords[1],coords[2] || 0));
     }
   }
   //console.log("reduced points in : " + ((new Date().getTime()) - time.getTime()));
