@@ -21,9 +21,6 @@ var files = {};
 
 // about page 
 app.post('/upload', upload.single('kml_file'), function(req, res) {
-  console.log(req.file);
-  console.log(req.body);
-
   var uid = uuid.v4();
   files[uid] = req.file;
   setTimeout(function() { 
@@ -41,26 +38,8 @@ app.post('/upload', upload.single('kml_file'), function(req, res) {
 });
 
 app.get("/file/:uid", function (req, res) {
-  console.log(req.params.uid);
   res.send(files[req.params.uid].buffer);
 });
-
-
-/*  # echo uploaded file with tolerance
-  post '/upload' do
-   
-    unless params[:kml_file] and (tempfile=params[:kml_file][:tempfile]) and (filename=params[:kml_file][:filename])
-      redirect '/?msg="missing-file"'
-      return
-    end
-    @filename = filename
-    @type     = params[:kml_file][:type]
-    @filecontent = tempfile.read
-    @tolerance = params[:tolerance]
-
-    erb :uploaded_kml
-  end*/
-
 
 app.listen(8080);
 console.log('8080 is the magic port');
